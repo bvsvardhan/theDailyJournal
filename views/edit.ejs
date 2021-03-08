@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+<h1>Compose</h1>
+
+<form class="" action="/publish"  method="post">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" name="postTitle" value="<%= title %>">
+  </div>
+  <div class="form-group">
+    <label>Post</label>
+    <textarea name="postContent" class="form-control"  rows="5" cols="40"><%= content %></textarea>
+  </div>
+    <button type="submit" class="btn btn-primary"  name="button">Publish Changes</button>
+    <button type="submit" class="btn btn-warning" formaction="/delete" name="button">Delete</button>
+    <input type="text" name="postId" value="<%= id %>" hidden="true">
+</form>
+
+
+<%- include("partials/footer"); -%>
